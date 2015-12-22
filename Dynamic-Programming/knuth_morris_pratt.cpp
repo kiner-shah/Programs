@@ -1,5 +1,6 @@
 /*Knuth-Morris-Pratt algorithm
 * By, Kiner Shah
+* 22nd December 2015
 */
 #include <iostream>
 #include <cstring>
