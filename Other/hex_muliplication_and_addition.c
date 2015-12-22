@@ -1,3 +1,7 @@
+/*Hexadecimal Addition and Multiplication 
+* by, KINER SHAH
+* 22nd December 2015
+*/
 #include<stdio.h>
 #include<iostream.h>
 #include<math.h>
