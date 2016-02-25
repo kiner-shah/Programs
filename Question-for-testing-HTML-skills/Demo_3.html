@@ -1,0 +1,450 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="w3.css">
+	<script type='text/javascript' src='jquery.js'></script>
+	<script type="text/javascript">
+		var gl;
+		$(document).ready(function() {
+			$('#two2').hide();
+			$('#two3').hide();
+			$('#two4').hide();
+			$('#two5').hide();
+			$('#four2').hide();
+			$('#four3').hide();
+			$('#1').hide();
+			$('#2').hide();
+			$('#3').hide();
+			$('#4').hide();
+			$('#5').hide();
+			$('#6').hide();
+			$('#7').hide();
+			$('#buttonlnk2').click(function() {
+				$('#two1').hide();
+				$('#two2').show();
+				$('#textbox').val('Did you notice? The electron flow goes on increasing linearly with respect to the externally applied voltage.');
+				$('#textbox').css('font-size','25px');
+				$('.imgopt').click(function() {
+					var id1=$(this).attr('id');
+					var src1=$('#'+id1).attr('src');
+					gl=id1;
+					$('#two2').hide();
+					$('#two3').show();
+					$('#textbox').val('Try and connect the micro world of the PN junction to its macroscopic IV graph and write a justification.');
+					$('#ans1').attr('src',src1);
+				});
+			});
+			$('#back').click(function() {
+				$('#two3').hide();
+				$('#two2').show();
+			});
+			$('#submit').click(function() {
+				/*$('.button').hide();
+				$('#three').hide();*/
+				$('#two3').hide();
+				$('#two4').show();
+				var src2=$('#'+gl).attr('src');
+				$('#ans2').attr('src',src2);
+				var r=$('#reasonbox').val();
+				if(gl === 'imgthree') {
+					$('#result').text('Yes! They match');
+					$('#result').css('color','green');
+					$('#reason').text(r);
+					$('#textbox').val('That is Good! You have correctly predicted the I-V characteristics of a PN junction. Now let us summarize the working of a PN junction by relating the microscopic model to the IV characteristics of the PN junction.');
+					$('#textbox').css('font-size','14px');
+				}
+				else {
+					$('#result').text('No! Guide Me');
+					$('#result').css('color','red');
+					$('#reason').text(r);
+					$('#textbox').val('You need to make more careful observations and establish a link between the microscopic model of the PN junction and its macroscopic IV characteristics. Would like to try again?');
+					$('#textbox').css('font-size','15px');
+					$('#omw').prop('disabled',false);
+				}
+			});
+			$('#omw').click(function() {
+				$('#two4').hide();
+				$('#three').hide();
+				$('#four').hide();
+				$('#1').show();
+				$('#7').show();
+				$('#textbox').val('Let us analyze why the prediction is not matching with the real world answer.');
+				$('#textbox').css('font-size','25px');
+			});
+			$('#y1').click(function() {
+				$('#disp1').text('Yes! That is right. Go ahead and answer the next question.');
+			});
+			$('#n1').click(function() {
+				$('#disp1').text('This is incorrect. You need to make careful observations and answer the rest of the questions. Go back and vary voltage and observe what happens in the microscopic model of the PN junction');
+			});
+			$('#y2').click(function() {
+				$('#disp2').text('Yes! That is right. Go ahead and answer the next question.');
+			});
+			$('#n2').click(function() {
+				$('#disp2').text('This is incorrect. You need to make careful observations and answer the rest of the questions. Go back and vary voltage and observe what happens in the microscopic model of the PN junction');
+			});
+			$('#y3').click(function() {
+				$('#disp3').text('That is right! Go ahead and try to think how the two are related.');
+			});
+			$('#n3').click(function() {
+				$('#disp3').text('This is incorrect. You need to make careful observations and answer the rest of the questions. Go back and vary voltage and observe what happens in the microscopic model of the PN junction');
+			});
+			$('#y4').click(function() {
+				$('#disp4').text('That is right! Now think about the pattern in which the current increases.');
+			});
+			$('#n4').click(function() {
+				$('#disp4').text('This is incorrect. You need to make careful observations and answer the rest of the questions. Go back and vary voltage and observe what happens in the microscopic model of the PN junction');
+			});
+			$('#y5').click(function() {
+				$('#disp5').text('That is right! Now think about the pattern in which the current increases when you exceed the barrier potential.');
+			});
+			$('#n5').click(function() {
+				$('#disp5').text('This is incorrect. You need to make careful observations and answer the rest of the questions. Go back and vary voltage and observe what happens in the microscopic model of the PN junction');
+			});
+			$('#fr').click(function() {
+				$('#textbox').hide();
+				$('#lady').hide();
+				$('#one').hide();
+				$('#two1').hide();
+				$('#two2').hide();
+				$('#two3').hide();
+				$('#two4').hide();
+				$('#two5').hide();
+				$('#three').hide();
+				$('#four').hide();
+				$('#four2').show();
+			});
+			$('#sry').click(function() {
+				$('#textbox').hide();
+				$('#lady').hide();
+				$('#one').hide();
+				$('#two1').hide();
+				$('#two2').hide();
+				$('#two3').hide();
+				$('#two4').hide();
+				$('#two5').hide();
+				$('#three').hide();
+				$('#four').hide();
+				$('#four2').hide();
+				$('#four3').show();
+			});
+			$('#y11').click(function() {
+				$('#textbox').val('Yes! That is right. Go ahead and answer the next question.');
+				$('#textbox').css('font-size','15px');
+				$('#1').fadeOut('slow');
+				$('#2').fadeIn('slow');
+			});
+			$('#n11').click(function() {
+				$('#textbox').val('This is incorrect. You need to make careful observations and answer the rest of the questions. Go back and vary voltage and observe what happens in the microscopic model of the PN junction');
+				$('#textbox').css('font-size','15px');
+				$('#1').fadeOut('slow');
+				$('#2').fadeIn('slow');
+			});
+			$('#y21').click(function() {
+				$('#textbox').val('Yes! That is right. Go ahead and answer the next question.');
+				$('#2').fadeOut('slow');
+				$('#3').fadeIn('slow');
+			});
+			$('#n21').click(function() {
+				$('#textbox').val('This is incorrect. You need to make careful observations and answer the rest of the questions. Go back and vary voltage and observe what happens in the microscopic model of the PN junction');
+				$('#2').fadeOut('slow');
+				$('#3').fadeIn('slow');
+			});
+			$('#y31').click(function() {
+				$('#textbox').val('That is right! Go ahead and try to think how the two are related.');
+				$('#3').fadeOut('slow');
+				$('#4').fadeIn('slow');
+			});
+			$('#n31').click(function() {
+				$('#textbox').val('This is incorrect. You need to make careful observations and answer the rest of the questions. Go back and vary voltage and observe what happens in the microscopic model of the PN junction');
+				$('#3').fadeOut('slow');
+				$('#4').fadeIn('slow');
+			});
+			$('#y41').click(function() {
+				$('#textbox').val('That is right! Now think about the pattern in which the current increases.');
+				$('#4').fadeOut('slow');
+				$('#5').fadeIn('slow');
+			});
+			$('#n41').click(function() {
+				$('#textbox').val('This is incorrect. You need to make careful observations and answer the rest of the questions. Go back and vary voltage and observe what happens in the microscopic model of the PN junction');
+				$('#4').fadeOut('slow');
+				$('#5').fadeIn('slow');
+			});
+			$('#y51').click(function() {
+				$('#textbox').val('That is right! Now think about the pattern in which the current increases when you exceed the barrier potential.');
+				$('#5').fadeOut('slow');
+			});
+			$('#n51').click(function() {
+				$('#textbox').val('This is incorrect. You need to make careful observations and answer the rest of the questions. Go back and vary voltage and observe what happens in the microscopic model of the PN junction');
+				$('#5').fadeOut('slow');
+			});
+			$('#pga').click(function() {
+				$('#1').hide();
+				$('#2').hide();
+				$('#3').hide();
+				$('#4').hide();
+				$('#5').hide();
+				$('#6').hide();
+				$('#7').hide();
+				$('#two2').show();
+				$('#three').show();
+				$('#four').show();
+				$('#omw').prop('disabled',true);
+				$('#textbox').val('Did you notice? The electron flow goes on increasing linearly with respect to the externally applied voltage.');
+				$('#textbox').css('font-size','25px');
+			});
+			/*var p='';
+			$('#proceed'+p).click(function() {
+				if(p === '') {
+					$('#1').fadeOut('slow');
+					$('#2').fadeIn('slow');
+					$('#proceed'+p).attr('id','proceed'+'1');
+					p='1';
+				}
+				else if(p === '1') {
+					$('#2').fadeOut('slow');
+					$('#3').fadeIn('slow');
+					$('#proceed'+p).attr('id','proceed'+'2');
+					p='2';
+				}
+				else if(p === '2') {
+					$('#3').fadeOut('slow');
+					$('#4').fadeIn('slow');
+					$('#proceed'+p).attr('id','proceed'+'3');
+					p='3';
+				}
+				else if(p === '3') {
+					$('#4').fadeOut('slow');
+					$('#5').fadeIn('slow');
+					$('#proceed'+p).hide();
+				}
+			});*/
+			$('#buttonlnk1').click(function() {
+				$('#two1').hide();
+				$('#two2').hide();
+				$('#two3').hide();
+				$('#two4').hide();
+				$('#two5').hide();
+				$('#four2').hide();
+				$('#four3').hide();
+				$('#1').show();
+				$('#6').show();
+				$('#three').hide();
+				$('#four').hide();
+			});
+		});
+	</script>
+	<style type="text/css">
+		body {
+			background-color: #F5F5DC;
+		}
+		#textbox {
+			border: 3px solid blue;
+			width: 96%;
+			height: 70px;
+			border-radius: 1px;
+			font-size: 25px;
+			color: red;
+			text-align: center;
+		}
+		h3 {
+			font-family: Arial;
+		}
+		p {
+			color: red;
+		}
+		#one {
+			width: 45%;
+			height: 90%;
+			text-align: center;
+			float: left;
+			border: 2px solid red;
+		}
+		#omw:disabled {
+			background-color: whitesmoke;
+		}
+		#omw:disabled:hover {
+			background-color: whitesmoke;
+			color: red;
+		}
+		#buttonlnk,#buttonlnk1,#buttonlnk2,#back,#submit,#omw {
+			background-color: white;
+			border: 1px solid black;
+			color: red; 
+			height: 30px;
+			margin-bottom: 20px;
+		}
+		#buttonlnk:hover,#buttonlnk1:hover,#buttonlnk2:hover,#back:hover,#submit:hover,#omw:hover {
+			background-color: red;
+			color: white;
+		}
+		#y1,#y2,#y3,#y4,#y5,#n1,#n2,#n3,#n4,#n5,#pga {
+			background-color: white;
+			color: red;
+		}
+		#y11,#y21,#y31,#y41,#y51,#n11,#n21,#n31,#n41,#n51,#proceed,#proceed1,#proceed2,#proceed3,#gbo {
+			background-color: white;
+			color: red;	
+		}
+		#y1:hover,#y2:hover,#y3:hover,#y4:hover,#y5:hover,#n1:hover,#n2:hover,#n3:hover,#n4:hover,#n5:hover,#pga:hover {
+			background-color: red;
+			color: white;
+		}
+		#y11:hover,#y21:hover,#y31:hover,#y41:hover,#y51:hover,#n11:hover,#n21:hover,#n31:hover,#n41:hover,#n51:hover,#proceed:hover,#proceed1:hover,#proceed2:hover,#proceed3:hover,#gbo:hover {
+			background-color: red;
+			color: white;	
+		}
+		#two1,#two2,#two3,#two4,#two5 {
+			width: 35%;
+			height: 90%;
+			text-align: center;
+			float: left;
+			border: 2px solid red;
+		}
+		#two2 img:hover {
+			border: 2px solid yellow;
+		}
+		#three {
+			width: 19%;
+			height: 90%;
+			float: left;
+			border: 2px solid red;
+		}
+		.imgopt {
+			display: inline;
+			width: 150px; 
+			height: 150px;
+			border: 2px solid red;
+		}
+		.button {
+			color: white;
+			background-color: #1E90FF;
+			border: 1px solid #1E90FF;
+		}
+		.button:hover {
+			color: white;
+			background-color: #000080;
+			border: 1px solid #000080;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src='lady.png' id='lady' style='height: 6%; width: 4%'><input id="textbox" type="text" value="Interact with the micro world and predict the macro world IV graph based on your observations." disabled>
+	</div>
+	<div id="one">
+		<h3>Micro World: <span style="color: red">IF THIS..</span></h3>
+		<h3><u>PN Junction</u></h3>
+    	<object width="90%" height="56%">
+    		<param name="movie" value="Demo_3.swf">
+		</object>
+		<input type="button" value="Direct Me" id="buttonlnk1">
+	</div>
+	<div id="two1">
+		<h3>Macro World: <span style="color: red">THAN THAT..</span></h3>
+		<h3><u>Current V/S Voltage Graph</u></h3>
+		<img src="diag1.jpg" class="imgopt" id="imgone">
+		<img src="diag2.jpg" class="imgopt" id="imgtwo"> <br></br>
+		<img src="diag3.jpg" class="imgopt" id="imgthree">
+		<img src="diag4.jpg" class="imgopt" id="imgfour"><br></br>
+		<input type="button" value="Predict Graph" id="buttonlnk2">
+	</div>
+	<div id="two2">
+		<h3>Macro World: <span style="color: red">THAN THAT..</span></h3>
+		<h3><u>Current V/S Voltage Graph</u></h3>
+		<h3>Select one of the four images</h3>
+		<img src="diag1.jpg" class="imgopt" id="imgone">
+		<img src="diag2.jpg" class="imgopt" id="imgtwo"> <br></br>
+		<img src="diag3.jpg" class="imgopt" id="imgthree">
+		<img src="diag4.jpg" class="imgopt" id="imgfour"><br></br>
+	</div>
+	<div id="two3">
+		<h3>Macro World: <span style="color: red">THAN THAT..</span></h3>
+		<h3 id='ans'><u>Your answer:</u></h3>
+		<img id='ans1' src=""><br></br>
+		<textarea rows="5" cols="50" placeholder="Justify it based on Micro World" id="reasonbox"></textarea><br></br>
+		<input type="button" value="Back" id="back">
+		<input type="button" value="Submit" id="submit">
+	</div>
+	<div id="two4">
+		<h3>Macro World: <span style="color: red">THAN THAT..</span></h3>
+		<h3><u>Your answer:</u></h3>
+		<img id='ans2' src=""><br></br>
+		<p id="reason"></p>
+		<h3><u>Real World answer:</u></h3>
+		<img src="diag3.jpg">
+		<p id="result"></p>
+		<input type="button" value="Observe Micro World" id="omw" disabled>
+	</div>
+	<div id="two5">
+		<p>Let us check if this is what you observed in the microscopic model of the PN junction:(If you want, then you can go back and vary the voltage, observe what happens and then answer these questions.)</p>
+		<p id="ques1">1. Was there a low electron flow initially? <input type="button" value="Yes" id="y1"><input type="button" value="No" id="n1"></p>
+		<p id='disp1'></p>
+		<p id="ques2">2. Was there a varying rise in the number of electrons when you varied the externally applied voltage? <input type="button" value="Yes" id="y2"><input type="button" value="No" id="n2"></p>
+		<p id='disp2'></p>
+		<p id="ques3">3. Do you think there is any connection between the current flow and the depletion layer? <input type="button" value="Yes" id="y3"><input type="button" value="No" id="n3"></p>
+		<p id='disp3'></p>
+		<p id="ques4">4. Did you notice that the current increased only when you applied a certain amount of external voltage? <input type="button" value="Yes" id="y4"><input type="button" value="No" id="n4"></p>
+		<p id='disp4'></p>
+		<p id="ques5">5. Do you think that the externally applied voltage had to exceed the barrier potential in order to have a rise in the current? <input type="button" value="Yes" id="y5"><input type="button" value="No" id="n5"></p> 
+		<p id='disp5'></p>
+		<!--<input type="button" value="Predict Graph again" id="pga">-->
+	</div>
+	<div id="three">
+		<h3 align="center">Circuit Diagram</h3>
+		<img src="circuitdiagram.png" style="padding-left: 30px">
+	</div>
+	<div id='four'>
+		<p align="center"><input type="button" value="Summary" id="sry" class="button">
+		<input type="button" value="Further Reading" id="fr" class="button"></p>
+	</div>
+	<div id="four2">
+		<h2 align="center">Links for further reading</h2>
+		<p>Books:</p>
+		<ol>
+			<li><b>Principles of Electronics</b> by V.K.Mehta</li>
+			<li><b>Basic Electronics</b> by Uday A. Bakashi.</li>
+		</ol>
+	</div>
+	<div id="four3">
+		<h2 align="center">Summary</h2>
+		<ul>
+			<li>A diode is the intersection of a p type and an n type semi conductor.</li>
+			<li>A diode will conduct only when the knee voltage is crossed.</li>
+			<li>The I-V characteristics of the diode are non linear, i.e the current is not proportional to the applied voltage. It is an exponential curve.</li>
+			<li>The knee voltage is 0.7 V for Si and 0.3 V for Ge.</li>
+			<li>The P and N sides of a diode always have equal doping and are of equal sizes. If this is not maintained then there are chances of the diode burning out or of it not conducting at all.</li>
+			<li>A current limiting resistor is always kept is series with the diode so as to avoid chances of excess current passing through the diode.</li>
+		</ul>
+	</div>
+	<!--Modifications-->
+	<div id='1'>
+		<p>Let us check if this is what you observed in the microscopic model of the PN junction:(If you want, then you can go back and vary the voltage, observe what happens and then answer these questions.)</p>
+		<p id="ques1">1. Was there a low electron flow initially? <input type="button" value="Yes" id="y11"><input type="button" value="No" id="n11"></p>
+		<p id='disp11'></p>
+	</div>
+	<div id='2'>
+		<p id="ques2">2. Was there a varying rise in the number of electrons when you varied the externally applied voltage? <input type="button" value="Yes" id="y21"><input type="button" value="No" id="n21"></p>
+		<p id='disp21'></p>
+	</div>
+	<div id='3'>
+		<p id="ques3">3. Do you think there is any connection between the current flow and the depletion layer? <input type="button" value="Yes" id="y31"><input type="button" value="No" id="n31"></p>
+		<p id='disp31'></p>
+	</div>
+	<div id='4'>
+		<p id="ques4">4. Did you notice that the current increased only when you applied a certain amount of external voltage? <input type="button" value="Yes" id="y41"><input type="button" value="No" id="n41"></p>
+		<p id='disp41'></p>
+	</div>
+	<div id='5'>
+		<p id="ques5">5. Do you think that the externally applied voltage had to exceed the barrier potential in order to have a rise in the current? <input type="button" value="Yes" id="y51"><input type="button" value="No" id="n51"></p> 
+		<p id='disp51'></p>
+	</div>
+	<div id='6'>
+		<input type="button" value="Go Back and Observe Model" id="gbo" onclick="window.location.href='Demo_3.html'">
+		<!--<input type="button" value="Proceed" id='proceed'>-->
+	</div>
+	<div id='7'>
+		<input type="button" value="Predict Graph again" id="pga">
+	</div>
+</body>
+</html>
+<!--style="vertical-align:top"-->
