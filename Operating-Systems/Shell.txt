@@ -1,0 +1,91 @@
+***To find a ^ b***
+echo "Enter a number: "
+
+read x
+
+echo "Enter another number: "
+
+read y
+
+p=1
+
+echo Ans1: $(( $x ** $y ))
+
+while [ $y -gt 0 ];
+
+do
+
+p=$(( p * x ))
+
+y=$(( y - 1 ))
+
+done
+
+echo Ans2: $p
+
+***To convert all data in a file to uppercase***
+echo "Enter a filename: "
+
+read x
+
+if [ -f $x ]
+
+then
+
+cat $x | tr [:lower:] [:upper:]
+
+else
+
+echo "Not a file"
+
+fi
+
+***To print the largest of three numbers***
+echo "Enter 1st no.: "
+
+read x
+
+echo "Enter 2nd no.: "
+
+read y
+
+echo "Enter 3rd no.: "
+
+read z
+
+if [ $x -gt $y -a $x -gt $z ]
+
+then
+
+echo "Largest number is $x"
+
+elif [ $y -gt $x -a $y -gt $z ]
+
+then
+
+echo "Largest number is $y" 
+
+elif [ $z -gt $x -a $z -gt $y ]
+
+then
+
+echo "Largest number is $z"
+
+fi
+
+***To check whether a file exists or not***
+echo "Enter a filename: "
+
+read x
+
+if [ -f $x ]
+
+then
+
+echo "File $x exists"
+
+else
+
+echo "File $x doesn't exist"
+
+fi
