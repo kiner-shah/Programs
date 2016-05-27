@@ -1,6 +1,5 @@
 /*
 Author: KINER SHAH 
-Class: TE COMP  Div.: B3    Roll no.: 1311113
 Experiment 1: Lexical Analyzer
 Subject: System Programming and Compiler Construction
 Date: 14th January 2016
