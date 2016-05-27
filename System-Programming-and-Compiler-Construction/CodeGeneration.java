@@ -1,6 +1,5 @@
 /*
 Author: KINER SHAH 
-Class: TE COMP  Div.: B3    Roll no.: 1311113
 Experiment 6: Code Generation using Sethi-Ullman algorithm
 Subject: System Programming and Compiler Construction
 Date: 31st March 2016
