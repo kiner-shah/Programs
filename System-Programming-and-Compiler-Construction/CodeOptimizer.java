@@ -1,6 +1,5 @@
 /*
 Author: KINER SHAH 
-Class: TE COMP  Div.: B3    Roll no.: 1311113
 Experiment : Code optimization
 Subject: System Programming and Compiler Construction
 Date: 17th March 2016
