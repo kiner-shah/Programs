@@ -1,0 +1,79 @@
+<? xml version="1.0" ?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.2//EN"
+"http://www.wapforum.org/DTD/wml12.dtd">
+<wml>
+	<card id = "home" title = "Home">
+		<p align = "center"><img src = "logo.jpg" height = "290" width = "210" align = "center" /></p>
+		<p align = "center"><b>K. J. Somaiya College of Engineering, Vidyavihar, Mumbai</b></p>
+		<p align = "center">(Autonomous College Affiliated to University of Mumbai)</p>
+		<p align = "center"><do type = "unknown" label = "Next" align = "center">
+			<go href = "#dept">
+		</do></p>
+	</card>
+	<card id = "dept">
+		<p align = "center"> <big>Select department</big> </p>
+		<p align = "center"><do name = "comp" type = "accept" label = "Computer Engineering">
+			<go href = "#comp">
+		</do> </p>
+		<p align = "center"><do name = "extc" type = "accept" label = "Telecommunication Engineering">
+			<go href = "#extc">
+		</do> </p>
+		<p align = "center"><do name = "mech" type = "accept" label = "Mechanical Engineering">
+			<go href = "#mech">
+		</do> </p>
+		<p align = "center"><do name = "etrx" type = "accept" label = "Electronics Engineering">
+			<go href = "#etrx">
+		</do> </p>
+		<p align = "center"><do name = "it" type = "accept" label = "Information Technology">
+			<go href = "#it">
+		</do></p>
+	</card>
+	<card id = "comp">
+		<p align = "center"> <big>Welcome to Computer Engineering</big> </p>
+		<p align = "center"><img src = "comp.jpg" height = "200" width = "800" align = "center" /></p>
+		<p>Computer engineers analyze, design, and evaluate computer systems, both hardware and software. They work on system such as a flexible manufacturing system or a "smart" device or instrument. Computer engineers often find themselves focusing onproblems or challenges which result in new "state of the art" products, which integrate computer capabilities. They work on the design, planning, development, testing, and even the supervision of manufacturing of computer hardware -- including everything from chips to device controllers.</p>
+		<p>They work on the interface between different pieces of hardware and strive to provide new capabilities to existing and new systems or products. The work of a computer engineer is grounded in the  hardware -- from circuits to architecture -- but also focuses on operating systems and software. They also focus on computer networks for thetransmission of data and multimedia. Computer engineers must understand logic design, microprocessor system design, computer architecture, computer interfacing, and continually focus on system requirements and design.</p>
+		<p align = "center"><do type = "accept" label = "Back">
+			<go href = "#dept">
+		</do></p>
+	</card>
+	<card id = "extc">
+		<p align = "center"> <big>Welcome to Telecommunication Engineering</big> </p>
+		<p align = "center"><img src = "telecom.jpg" height = "200" width = "800" align = "center" /></p>
+		<p>Gives a strong electronics background with an emphasis on its application to communication technologies.Electronics and Telecommunication Engineering is one of the largest and most sophisticated branches of engineering. It has made us available the equipments like Television, Radio, computers, telephones etc. It has a major role in improving productivity in industries like oil, energy, agriculture and so many other important sectors of economy.</p>
+		<p>An Electronics and Telecommunication engineer works in groups to design, fabricate, produce, test and supervise the manufacturing of complex products and systems i.e. electronic equipment and components.
+		He works for a number of industries including hospitals, computer industries, electronic data processing systems for communication and in defence etc. They work with microprocessors, fibre optics, telecommunication, television, radios etc. Electronics and Telecommunication engineering is a rapidly growing sector where there is excellent job opportunity for the skilled professionals.</p>
+		<p align = "center"><do type = "accept" label = "Back">
+			<go href = "#dept">
+		</do></p>
+	</card>
+	<card id = "mech">
+		<p align = "center"> <big>Welcome to Mechanical Engineering</big> </p>
+		<p align = "center"><img src = "mech.jpg" height = "200" width = "800" align = "center" /></p>
+		<p>Mechanical engineers are the backbone of the engineering profession and work in every industry - from transportation, communications and electronics to bioengineering, commerce and manufacturing in business, government and universities.</p>
+		<p>Mechanical engineers work with motion, energy and forces and are involved in manufacturing the products they design. They design robotic systems, products, computer control systems for machinery, commercial jets, instruments for medicine and high-performance sporting equipment, and supervise manufacturing operations.</p>
+		<p align = "center"><do type = "accept" label = "Back">
+			<go href = "#dept">
+		</do></p>
+	</card>
+	<card id = "etrx">
+		<p align = "center"> <big>Welcome to Electronics Engineering</big></p>
+		<p align = "center"><img src = "etrx.jpg" height = "200" width = "800" align = "center" /></p>
+		<p>Electronics is the branch of science, engineering and technology that deals with electrical circuits involving active electrical components such as vacuum tubes, transistors, diodes and integrated circuits, and associated passive interconnection technologies. The nonlinear behaviour of active components and their ability to control electron flows makes amplification of weak signals possible and is usually applied to information and signal processing. Similarly, the ability of electronic devices to act as switches makes digital information processing possible. Interconnection technologies such as circuit boards, electronics packaging technology, and other varied forms of communication infrastructure complete circuit functionality and transform the mixed components into a working system.</p>
+		<p align = "center"><do type = "accept" label = "Back">
+			<go href = "#dept">
+		</do></p>
+	</card>
+	<card id = "it">
+		<p align = "center"> <big>Welcome to Information Technology</big> </p>
+		<p align = "center"><img src = "it.png" height = "200" width = "800" align = "center" /></p>
+		<p>The course Bachelor of Information Technology in Engineering is designed to give the students a strong background in the fundamentals of information technology, engineering science and management. A graduate of this program should be able to use these fundamentals to analyze and evaluate computer systems, both hardware and software, understand the business problems, communicate with customers to clearly define their requirements and provide solutions that satisfy the community's business needs.</p>
+		<p>Implement services for communities of interest. Coordinate the planning, development, and implementation of new information in technology resources using the best practices of project management.
+		This course also makes the students responsible for providing strategic technology direction through a nice blend of course work and projects, the department endows students with the ability to apply knowledge of science, mathematics and engineering to work effectively in multidisciplinary teams, provide leadership and technical expertise, and practice engineering with ethical approaches and concern for society and environment.</p>
+		<p>The Department's mission is:  To impart the quality based technical education in this field with constant value addition in the frontiers of IT. The strength of the department is the students and the faculty. Faculty members constantly upgrade themselves so as to keep track of the fast changes in the field either by pursuing higher education or attending various training programs. Our students are also provided platform to improve their skills by organizing various activities under the banner of student's associations such as IEEE, CSI, ITSA annual technical and cultural programs.</p>
+		<p>The Department's vision is: To produce graduates to become future leaders for industry, academia, government and society worldwide whose vision is founded upon fundamental knowledge, creative and analytical skills, local/regional perspective and ethics.</p>
+		<p align = "center"><do type = "accept" label = "Back">
+			<go href = "#dept">
+		</do></p>
+	</card>
+</wml>
