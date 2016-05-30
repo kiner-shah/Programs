@@ -1,0 +1,74 @@
+yacc.y file
+
+%{
+#include <stdio.h>
+
+void yyerror (const char *str) {
+	fprintf(stderr, "error: %s\n", str);
+}
+
+int yywrap() {
+	return 1;
+}
+
+main() {
+	yyparse();
+}
+
+%}
+
+%%
+
+%token SELECT FROM IDENTIFIER WHERE AND;
+
+line: select items using condition '\n' { printf("Syntax Correct\n"); };
+
+select: SELECT;
+
+items: '*' | identifiers;
+
+identifiers: IDENTIFIER | IDENTIFIER ',' identifiers;
+
+using: FROM IDENTIFIER WHERE;
+
+condition: IDENTIFIER '=' IDENTIFIER | IDENTIFIER '=' IDENTIFIER AND condition;
+
+%%
+
+
+lex.l file
+
+%{
+#include <stdio.h>
+#include "y.tab.h"
+extern int yylval;
+%}
+
+%%
+select					return SELECT;
+from					return FROM;
+where					return WHERE;
+and						return AND;
+[*]						return *yytext;
+[,]						return *yytext;
+[=]						return *yytext;
+[a-zA-Z][a-zA-Z0-9]+	return IDENTIFIER;
+\n						return *yytext;
+[ \t]+					/* ignore whitespace */;
+%%
+
+
+Output:
+kjsce@M17xR4:~/lexyacc$ lex lex.l
+
+kjsce@M17xR4:~/lexyacc$ yacc -d yacc.y
+
+kjsce@M17xR4:~/lexyacc$ gcc lex.yy.c y.tab.c -o lexyacc
+
+kjsce@M17xR4:~/lexyacc$ ./lexyacc
+select * from table1 where name=kiner
+Syntax Correct
+select name from table2 where name=kiner and surname=shah
+Syntax Correct
+select * where name=kiner
+error: syntax error
