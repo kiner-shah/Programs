@@ -1,0 +1,16 @@
+<wml>
+
+<card id="form1" name="form">
+Name:<input name="fname" size="12"><br>
+Username:<input name="username" size="12"><br>
+Password:<input name="pwd" type="password" size="12"><br>
+<do type="submit">
+<go href="#display"/>
+</do>
+</card>
+
+<card id="display" name="displayform">
+Thank you $fname, you've successfully registered as <b>$username</b>.
+</card>
+
+</wml>
