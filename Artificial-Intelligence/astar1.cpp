@@ -1,3 +1,6 @@
+/*
+** Author: Kiner Shah
+*/
 #include <iostream>
 #include <vector>
 #include <cmath>
