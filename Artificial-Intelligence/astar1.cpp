@@ -1,5 +1,5 @@
 /*
-** Author: Kiner Shah
+** Author: Kiner Shah.
 */
 #include <iostream>
 #include <vector>
