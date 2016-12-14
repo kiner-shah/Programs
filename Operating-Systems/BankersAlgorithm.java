@@ -1,5 +1,5 @@
 import java.util.*;
-class Banker1 {
+class BankersAlgorithm {
     public static void main(String[] args) {
         int available[],max[][],allocation[][],need[][];
         int i,j,n,m,k;
