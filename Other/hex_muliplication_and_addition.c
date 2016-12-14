@@ -1,6 +1,8 @@
-/*Hexadecimal Addition and Multiplication 
+/*
+* Hexadecimal Addition and Multiplication (Not a generic implementation)
 * by, KINER SHAH
 * 22nd December 2015
+* Note: Works only for inputs in range (00000 to FFFFF)
 */
 #include<stdio.h>
 #include<iostream.h>
